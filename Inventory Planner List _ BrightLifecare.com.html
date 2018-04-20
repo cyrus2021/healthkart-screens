@@ -566,17 +566,67 @@
                 flex-flow: column nowrap;
             }
 
+            .planner-modal-content label{
+                display: flex;
+            }
+            
+            /* styles overrides for stores modal */
+            .store-planner .planner-modal-content{
+                flex: 0 0 35em;
+                height: 60%;
+                padding: 0 2%;
+            }
+
+            .store-planner .planner-modal-content .selection-content{
+                flex: 10 0 0;
+                overflow: auto;
+                /* background: rgb(200,200,200); */
+                /* border: 1px solid #888888; */
+                display: flex;
+                flex-flow: row nowrap;
+            }
+
+            .store-planner .planner-modal-content .store-column{
+                flex: 1 0 0;
+            }
+
+            .store-planner h1, h2, h3, h4, h5, h6{
+                font-weight: bold;
+            }
+
+            .store-planner .planner-modal-header{
+                text-align: center;
+            }
+
+            .store-planner .planner-modal-footer{
+                flex: 0 0 2em;
+            }
+
             .planner-modal-content .input-label-text{
-                padding-left: 1%;
-                line-height: 250%;
+                padding-left: 0.5em;
+                /* line-height: 250%; */
+                /* white-space: nowrap; */
+                /* overflow: hidden; */
+                /* text-overflow: ellipsis; */
+                font-weight: normal;
+                word-wrap: break-word;
             }
 
             .selection-content label{
                 padding-left: 5%;
             }
 
-            .planner-modal-content .checkbox{
-                cursor: pointer;
+            .planner-modal-content .store-name{
+                padding: 2% 2%;
+                /* font-weight: bold; */
+                font-style: italic;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .planner-modal-content .store-col-2{
+                padding-left: 20%;
             }
 
             .planner-modal input[type="checkbox"]{
@@ -617,7 +667,8 @@
             }
 
             .planner-modal-body .zone-selection-header .selection-heading{
-                flex: 1 0 0;
+                flex: 1 0 2em;
+                margin-bottom: 2%;
             }
 
             .planner-modal-body .zone-selection-header .selection-content{
@@ -645,8 +696,13 @@
                 flex: 1 0 0;
             }
 
-            .planner-modal-body .zone-selection-header .selection-content .checkbox{
-                flex: 0 0 8em;
+            .planner-modal-body .zone-selection-header .selection-content .custom-checkbox{
+                flex: 0 0 10em;
+            }
+
+            .planner-modal-body .zone-selection-content .selection-content .custom-checkbox{
+                padding: 2% 2%;
+                font-weight: none;
             }
 
             .planner-modal-footer{
@@ -688,25 +744,25 @@
 
             .selected-label-north{
                 /* color:  #cc3333; */
-                color: #570099;
+                color: #bd70f7;
                 font-weight: bold;
             }
 
             .selected-label-south{
                 /* color:  #0000ff; */
-                color: #570099;
+                color: #bd70f7;
                 font-weight: bold;
             }
 
             .selected-label-east{
                 /* color:  #009966; */
-                color: #570099;
+                color: #bd70f7;
                 font-weight: bold;
             }
 
             .selected-label-west{
                 /* color: #ffff66; */
-                color: #570099;
+                color: #bd70f7;
                 font-weight: bold;
             }
 
@@ -741,19 +797,19 @@
             <div class="planner-modal-body">
                 <div class="zone-selection-header">
                         <div class="selection-heading">
-                            <h6>Select Zone</h6>
+                            <h5 style="text-decoration: underline;">Select Zone</h5>
                         </div>
                         <div class="selection-content">
-                                <div class="checkbox">
+                                <div class="custom-checkbox">
                                     <label><input class="checkbox-north-all" type="checkbox" value=""><span class="input-label-text">North</span></label>
                                 </div>
-                                <div class="checkbox">
+                                <div class="custom-checkbox">
                                     <label><input class="checkbox-south-all" type="checkbox" value=""><span class="input-label-text">South</span></label>
                                 </div>
-                                <div class="checkbox">
+                                <div class="custom-checkbox">
                                     <label><input class="checkbox-east-all" type="checkbox" value=""><span class="input-label-text">East</span></label>
                                 </div>
-                                <div class="checkbox">
+                                <div class="custom-checkbox">
                                     <label><input class="checkbox-west-all" type="checkbox" value=""><span class="input-label-text">West</span></label>
                                 </div>
                         </div>
@@ -761,136 +817,136 @@
                 </div>
                 <div class="zone-selection-content">
                         <div class="selection-heading">
-                            <h6>Select Stores</h6>
+                            <h5 style="text-decoration: underline;">Select Stores</h5>
                         </div>
                         <div class="selection-content">
                             <div class="store-column">
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
+                                        <label><input class="checkbox-north" type="checkbox" value=""><span class="input-label-text">Del-North to get all option here dasfsfdfsdfsd</span></label>
+                                    </div>
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-north" type="checkbox" value=""><span class="input-label-text">Del-North</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-north" type="checkbox" value=""><span class="input-label-text">Del-North</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-north" type="checkbox" value=""><span class="input-label-text">Del-North</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-north" type="checkbox" value=""><span class="input-label-text">Del-North</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-north" type="checkbox" value=""><span class="input-label-text">Del-North</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-north" type="checkbox" value=""><span class="input-label-text">Del-North</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-north" type="checkbox" value=""><span class="input-label-text">Del-North</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-north" type="checkbox" value=""><span class="input-label-text">Del-North</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-north" type="checkbox" value=""><span class="input-label-text">Del-North</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-north" type="checkbox" value=""><span class="input-label-text">Del-North</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-north" type="checkbox" value=""><span class="input-label-text">Del-North</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-north" type="checkbox" value=""><span class="input-label-text">Del-North</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-north" type="checkbox" value=""><span class="input-label-text">Del-North</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-north" type="checkbox" value=""><span class="input-label-text">Del-North</span></label>
                                     </div>
-                                    <div class="checkbox">
-                                        <label><input class="checkbox-north" type="checkbox" value=""><span class="input-label-text">Del-North</span></label>
-                                    </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-north" type="checkbox" value=""><span class="input-label-text">Del-North</span></label>
                                     </div>
                             </div>
                             <div class="store-column">
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-south" type="checkbox" value=""><span class="input-label-text">DEL - South</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-south" type="checkbox" value=""><span class="input-label-text">DEL - South</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-south" type="checkbox" value=""><span class="input-label-text">DEL - South</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-south" type="checkbox" value=""><span class="input-label-text">DEL - South</span></label>
                                     </div>
 
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-east" type="checkbox" value=""><span class="input-label-text">DEL - East</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-east" type="checkbox" value=""><span class="input-label-text">DEL - East</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-east" type="checkbox" value=""><span class="input-label-text">DEL - East</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-east" type="checkbox" value=""><span class="input-label-text">DEL - East</span></label>
                                     </div>
 
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-east" type="checkbox" value=""><span class="input-label-text">DEL - East</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-east" type="checkbox" value=""><span class="input-label-text">DEL - East</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-east" type="checkbox" value=""><span class="input-label-text">DEL - East</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-east" type="checkbox" value=""><span class="input-label-text">DEL - East</span></label>
                                     </div>
                             </div>
                             <div class="store-column">
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-east" type="checkbox" value=""><span class="input-label-text">DEL - East</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-east" type="checkbox" value=""><span class="input-label-text">DEL - East</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-east" type="checkbox" value=""><span class="input-label-text">DEL - East</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-east" type="checkbox" value=""><span class="input-label-text">DEL - East</span></label>
                                     </div>
 
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-west" type="checkbox" value=""><span class="input-label-text">DEL - West</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-west" type="checkbox" value=""><span class="input-label-text">DEL - west</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-west" type="checkbox" value=""><span class="input-label-text">DEL - west</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-west" type="checkbox" value=""><span class="input-label-text">DEL - west</span></label>
                                     </div>
 
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-west" type="checkbox" value=""><span class="input-label-text">DEL - west</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-west" type="checkbox" value=""><span class="input-label-text">DEL - west</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-west" type="checkbox" value=""><span class="input-label-text">DEL - west</span></label>
                                     </div>
-                                    <div class="checkbox">
+                                    <div class="custom-checkbox">
                                         <label><input class="checkbox-west" type="checkbox" value=""><span class="input-label-text">DEL - west</span></label>
                                     </div>
                             </div>
@@ -908,11 +964,103 @@
         </div>
     </div>
 
+    <!-- 20/04/2018 -->
+    <!-- markup for store names -->
+    <div id="stores-modal" class="planner-modal store-planner">
+        <div class="planner-modal-content">
+            <div class="planner-modal-header">
+                <h4 style="text-decoration: underline;">Store names for planner Id <span id="store-planner-id">--</span> </h4>
+                <span onClick="hideStoresModal()" class="close-inventory-planner" class="close">&times;</span>
+            </div>
+            <div class="planner-modal-body">
+                <div>
+                    <h5 style="color: #bd70f7;">Total Stores : <span id="store-planner-count">--</span> </h5>
+                    <h5 style="text-align: center; text-decoration: underline;">Store names</h5>
+                </div>
+                
+                <div class="selection-content">
+                    <div class="store-column">
+                        <!-- <div class="custom-checkbox">
+                            test
+                        </div>
+                        <div class="custom-checkbox">
+                            test2
+                        </div> -->
+                    </div>
+                    <div class="store-column">
+                        <!-- <div class="custom-checkbox">
+                            test3
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="planner-modal-footer">
+    
+            </div>
+
+        </div>
+    </div>
+
+
     <!-- script -->
     <script>
             (function(){
+                window.showStoresModal = function(row){
+                    console.log("inside show store modal")
+                    var modal = document.getElementById('stores-modal');
 
-                    window.showStoreInventoryModal = function(){
+                    // var row = JSON.parse(rowstring);
+                    var storecount = row.stores.count;
+
+                    $("#store-planner-id").text(row.id);
+                    $("#store-planner-count").text(row.stores.count);
+
+                    if(row.stores && row.stores.storenames && row.stores.storenames.length){
+                        var halfindex = Math.ceil(row.stores.storenames.length / 2);
+                        var column1 = row.stores.storenames.slice(0, halfindex);
+                        var column2 = row.stores.storenames.slice(halfindex);
+
+                        // console.log("column1:", column1);
+                        // console.log("column2:", column2);
+
+
+                        var domresult = $("#stores-modal .selection-content .store-column");
+                        
+                        if(domresult.length === 2){
+                            var domcol1 = domresult[0];
+                            var domcol2 = domresult[1];
+
+                            var col1html = "";
+                            var col2html = "";
+
+                            column1.map(function(value){
+                                col1html += " <div class='store-name'>" + value + "</div>";
+                                });
+                        
+                            column2.map(function(value){
+                                col2html += " <div class='store-name store-col-2'>" + value + "</div>";
+                                });
+
+                            domcol1.innerHTML = col1html;
+                            domcol2.innerHTML = col2html;
+                        }
+                        else{
+                            console.warn("expecting 2 columns from dom");
+                        }
+                    }
+
+                    modal.style.display = 'flex';
+
+                };
+
+                window.hideStoresModal = function(){
+                    var modal = document.getElementById('stores-modal');
+
+                    modal.style.display = 'none';
+                };
+
+
+                window.showStoreInventoryModal = function(){
                     var modal = document.getElementById('inventory-planner');
 
                     modal.style.display = 'flex';
@@ -973,7 +1121,7 @@
                 }
 
                 function updateCheckedCount(){
-                    _checkedinventorystores = $(".planner-modal-body .zone-selection-content .selection-content .store-column .checkbox input:checked");
+                    _checkedinventorystores = $(".planner-modal-body .zone-selection-content .selection-content .store-column .custom-checkbox input:checked");
                     $("#selected-inventory-stores").text(_checkedinventorystores.length);
                 }
 
@@ -988,7 +1136,7 @@
 
                 var _checkedinventorystores = null;
 
-                $(".planner-modal-body .zone-selection-content .selection-content .store-column .checkbox").bind("change",function(e){ // change event for each inner element
+                $(".planner-modal-body .zone-selection-content .selection-content .store-column .custom-checkbox").bind("change",function(e){ // change event for each inner element
                     
                     // console.log("checked elements", _checkedinventorystores.length);
 
@@ -1011,7 +1159,7 @@
                 });
 
 
-                var _allinventorystores = $(".planner-modal-body .zone-selection-content .selection-content .store-column .checkbox");
+                var _allinventorystores = $(".planner-modal-body .zone-selection-content .selection-content .store-column .custom-checkbox");
                 $("#selected-inventory-stores").text("0");
                 $("#total-inventory-stores").text(_allinventorystores.length);
                 
@@ -3066,13 +3214,14 @@ var a = document.getElementById("searchVariantID1").value;
                         var dateString = curr_date + " " + m_names[curr_month] + " " + curr_year;
                         htmlContent = htmlContent + '<td>' + dateString +'</td>';
 
+                        // 20/04/2018
                         // create a dummy stores column here. this response comes from server
 
                         // comment or delete when this data come from api
                         fetchedData[i].stores = {
                             count: 5,
-                            storename: [
-                                'Del punjabi',
+                            storenames: [
+                                'Del punjabi looooooooong text herera',
                                 'Del karkar',
                                 'BGR Indira',
                                 'BGR New Bel',
@@ -3083,14 +3232,32 @@ var a = document.getElementById("searchVariantID1").value;
                                 'BGR Indira',
                                 'BGR New Bel',
                                 'BGR Karaman',
+                                'HYD Gachibowli',
+                                'Del Punjabi',
+                                'Del Karkardooma',
+                                'BGR Indira',
+                                'BGR New Bel',
+                                'BGR Karaman',
+                                'HYD Gachibowli',
+                                'Del Punjabi',
+                                'Del Karkardooma',
+                                'BGR Indira',
+                                'BGR New Bel',
+                                'BGR Karaman',
+                                'HYD Gachibowli',
+                                'Del Punjabi',
+                                'Del Karkardooma',
+                                'BGR Indira',
+                                'BGR New Bel',
+                                'BGR Karaman',
                                 'HYD Gachibowli'
 
                             ]
                         }
-                        
-
-                        var storecount = fetchedData[i].stores.count;
-                        htmlContent = htmlContent + '<td style="text-align: center;">' + "<span>" + fetchedData[i].stores.count + "</span><br/><button type='button' class='btn btn-primary'>View</button>" + '</td>';
+                                                
+                        var fetchstring = JSON.stringify(fetchedData[i]);
+            
+                        htmlContent = htmlContent + '<td style="text-align: center;">' + "<span><b>" + fetchedData[i].stores.count + "</b></span><br/><button type='button' onClick='showStoresModal(" + fetchstring + ")' class='btn btn-primary'>View</button>" + '</td>';
                         
                         
                         /* This is updated date placeholder */
