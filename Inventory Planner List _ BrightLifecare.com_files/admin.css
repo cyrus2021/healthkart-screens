@@ -1,0 +1,392 @@
+body {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+}
+
+.highlight_hold, .highlight_cod_bgcolor {
+    background: #f2f1f1;
+}
+
+.highlight_error {
+    background: salmon;
+}
+
+.highlight_hold>td:first-child {
+    background: #a6c4c4;
+    color: white;
+}
+
+.icon_hold {
+    background: #a6c4c4;
+}
+
+.highlight_cod>td:first-child {
+    background: #ecc0c0;
+    color: white;
+}
+
+.icon_cod {
+    background: #ecc0c0;
+}
+
+h1 {
+    margin: 1em;
+    border-bottom: 1px dotted #f0f0f0;
+    color: #3379BB;
+    font-weight: bold;
+}
+
+.reportBox {
+    padding: 2px;
+    outline: 1px solid gray;
+    margin: 2px;
+    width: 450px;
+    height:360px;
+    float: left;
+    border: 1px solid #f0f0f0;
+    border-radius: 0.5em;
+    outline: none;
+}
+
+.roundBox {
+    padding: 10px;
+    outline: 15px solid gray;
+    margin: 10px;
+    width: 300px;
+    float: left;
+    border: 15px solid #f0f0f0;
+    border-radius: 0.5em;
+    outline: none;
+}
+
+.roundBox:hover {
+    background: #F2F7FB;
+}
+
+.roundBox:hover h2 {
+    color: #f87500;
+
+}
+
+.roundBox:hover h3 {
+    color: #000;
+}
+
+.roundBox h2 {
+    color: #3379bb;
+    margin: 0.5em;
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.roundBox h3 {
+    margin: 0.5em;
+}
+
+.roundBox a, table a {
+    font-size: 13px;
+    padding: 5px;
+    line-height: 21px;
+    color: #444;
+    padding: 0.2em 0.5em;
+    border-bottom: 0;
+    border-radius: 0.5em;
+}
+
+.roundBox a:hover, table a:hover {
+    color: #fff;
+    background-color: #3379bb;
+}
+
+.roundBox a:active {
+    background-color: #f87500;
+}
+
+ul {
+    list-style: none;
+}
+
+table {
+    margin: 1em 0;
+    padding: 0.5em;
+    clear: both;
+}
+
+tr.alt, tr.alt tr {
+    background: #ffe;
+}
+
+thead tr, thead tr:hover {
+    background: #444;
+    color: #fff;
+    border: 0;
+}
+
+th {
+    padding: 0.5em;
+    font-weight: bold;
+    text-align: left;
+    font-size: 1.2em;
+}
+
+th:first-of-type {
+    border-top-left-radius: 0.5em;
+}
+
+th:last-of-type {
+    border-top-right-radius: 0.5em;
+}
+
+tr {
+    padding: 1em 0;
+    background: #fafaee;
+    border-left: 0;
+    border-right: 0;
+    font-size: 0.7em;
+}
+
+tr:hover, tr:hover tr {
+    background: #F2F7FB;
+    background: rgba(160, 250, 255, 0.2);
+}
+
+tr:hover a {
+    color: #d66;
+    background: #f0f0f0;
+    background: rgba(255, 255, 255, 0.96);
+}
+
+tr a:hover {
+    color: #fff;
+    border: 0;
+    background: #3379bb;
+}
+
+td, td tr, td tr td {
+    border: 1px dottedi #ddd;
+    padding: 0.5em;
+    line-height: 1.5em;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    color: #444;
+}
+
+tr a {
+    border: 0;
+}
+
+td a {
+    font-size: 0.8em;
+    color: #889;
+    border: 0;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+li.fieldLabel {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+li a {
+    font-size: 1em;
+    font-weight: normal;
+    color: #000;
+}
+
+li label {
+    width: 150px;
+    padding-right: 0.5em;
+    text-align: right;
+    /*display: inline-block;*/
+    font-size: 12px;
+    line-height: 18px;
+    vertical-align: middle;
+}
+
+.or {
+    color: #f87500;
+}
+
+table table {
+    width: 100%;
+}
+
+fieldset legend {
+    display: block;
+    color: #f87500;
+    background: white;
+    padding: 0 0.5em;
+}
+
+fieldset li {
+    margin: 1em 0;
+}
+
+fieldset li textarea {
+    width: 35%;
+    vertical-align: middle;
+}
+
+select[disabled='disabled'] {
+    background: #f0f0f0;
+}
+
+.menuBar ul.lvl1 li.lvl1 {
+    margin-bottom: 0;
+}
+
+.adminMenuBar {
+    border-bottom: 0;
+    background: #444;
+}
+
+.highlight, .highlight table, .highlight tr, .highlight td {
+    background: #ffff99;
+}
+
+.adminMenuBar ul.lvl1 {
+    height: auto;
+}
+
+.adminMenuBar ul.lvl1 {
+}
+
+.adminMenuBar ul.lvl1 li.lvl1 {
+    border: 0;
+
+}
+
+.adminMenuBar ul.lvl1 li.lvl1 a {
+    font-size: 16px;
+}
+
+.adminMenuBar ul.lvl1 li.menuItem:hover {
+    background: #f2f7fb;
+    border-color: #ff9d45;
+}
+
+/* line 160, ../sass/main.scss */
+.adminMenuBar ul.lvl1 li.menuItem:hover a {
+    border-bottom: 1px solid #444;
+    color: #444;
+    text-shadow: 0 1px 0 white;
+}
+
+.menuBar ul.lvl1 li.lvl1:first-child:hover {
+    background: #f2f7fb;
+    border: 1px solid #ff9d45;
+}
+
+.buttons {
+    margin-left: 400px;
+    clear: both;
+    float: none;
+}
+
+input[type='submit'] {
+    -moz-border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    -o-border-radius: 0.3em;
+    -ms-border-radius: 0.3em;
+    -khtml-border-radius: 0.3em;
+    border-radius: 0.0em;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 0.4em 0.8em;
+    color: white;
+    cursor: pointer;
+    border: 2px solid transparent;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.7);
+    background: #f27506;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.1)), color-stop(100%, rgba(255, 255, 255, 0)));
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 100%);
+    background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 100%);
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 100%);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    margin: 10px 5px;
+    text-align: center;
+    display: inline;
+}
+
+input[type='submit']:hover {
+    box-shadow: none;
+    background: #ff8213;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.1)), color-stop(100%, rgba(0, 0, 0, 0.1)));
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1) 100%);
+    background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1) 100%);
+    background-image: -o-linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1) 100%);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.1) 100%);
+    color: white;
+    border: 2px solid transparent;
+}
+
+/* line 89, ../sass/_base.scss */
+input[type='submit']s:active {
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
+    background: #df6900;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+fieldset {
+    background: #fafaee;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 1em;
+}
+
+textarea {
+    vertical-align: middle;
+}
+
+.checkBoxList {
+    float: left;
+}
+
+.checkBoxList label {
+    width: auto;
+    text-align: left;
+}
+
+label.highlight {
+    font-weight: bold;
+}
+
+select{
+    height: auto;
+    padding: 2px;
+    font-size: 12px;
+}
+.alert{
+    color: green;
+}
+.error-alert{
+    color: red;
+}
+.cke_skin_kama, .cke_editor{
+    width: 80%;
+}
+fieldset input[type='text'], input[type='text']{
+    font-size: 14px;
+    padding: 2px;
+    height: 18px;
+    width: 100px;
+    max-width: 300px;
+}
+.courier-prcng-tbl{
+    max-width:1000px;
+}
+.courier-prcng-tbl th, .courier-prcng-tbl td{
+    width:70px;
+}
+.courier-prcng-tbl td input[type="text"]{
+    width:50px;
+}
+
+
+
+
