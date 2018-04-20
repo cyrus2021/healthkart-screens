@@ -566,6 +566,10 @@
                 flex-flow: column nowrap;
             }
 
+            .planner-modal-content .highlight{
+                background: none;
+            }
+
             .planner-modal-content label{
                 display: flex;
             }
@@ -604,10 +608,6 @@
 
             .planner-modal-content .input-label-text{
                 padding-left: 0.5em;
-                /* line-height: 250%; */
-                /* white-space: nowrap; */
-                /* overflow: hidden; */
-                /* text-overflow: ellipsis; */
                 font-weight: normal;
                 word-wrap: break-word;
             }
@@ -617,12 +617,11 @@
             }
 
             .planner-modal-content .store-name{
-                padding: 2% 2%;
-                /* font-weight: bold; */
-                font-style: italic;
-                white-space: nowrap;
+                padding: 3% 2%;
+                word-wrap: break-word;
+                /* white-space: nowrap;
                 overflow: hidden;
-                text-overflow: ellipsis;
+                text-overflow: ellipsis; */
             }
 
             .planner-modal-content .store-col-2{
@@ -791,7 +790,7 @@
     <div id="inventory-planner" class="planner-modal">
         <div class="planner-modal-content">
             <div class="planner-modal-header">
-                <h4>Create New Inventory Planner for Non/Private Label Products</h4>
+                <h4 style="text-decoration: underline;">Create New Inventory Planner for Non/Private Label Products</h4>
                 <span onClick="hideStoreInventoryModal()" class="close-inventory-planner" class="close">&times;</span>
             </div>
             <div class="planner-modal-body">
@@ -1082,14 +1081,15 @@
 
                 function performChecks(checkboxtype){
                     return function(e){
-                    // console.log("input clicked",e.currentTarget)
-                    // console.log(e.target.checked);
+                        // console.log("input clicked",e.currentTarget)
+                        // console.log(e.target.checked);
 
-                    var zonecheckboxes = $(".planner-modal-body .zone-selection-content .selection-content .checkbox-" + checkboxtype);
-                    updateSingleCheck(e.target, checkboxtype);
-                    updateCheckGroup(e.target, checkboxtype, zonecheckboxes);
-                    updateCheckedCount();
-                }
+                        var zonecheckboxes = $(".planner-modal-body .zone-selection-content .selection-content .checkbox-" + checkboxtype);
+                        // updateSingleCheck(e.target, checkboxtype);
+                        updateSingleCheck(e.target, '');
+                        updateCheckGroup(e.target, checkboxtype, zonecheckboxes);
+                        updateCheckedCount();
+                    }
                 }
 
                 function updateCheckGroup(target, checkboxtype, storechecks){
@@ -3221,7 +3221,7 @@ var a = document.getElementById("searchVariantID1").value;
                         fetchedData[i].stores = {
                             count: 5,
                             storenames: [
-                                'Del punjabi looooooooong text herera',
+                                'Del punjabi loooooooooooooooooong text herera',
                                 'Del karkar',
                                 'BGR Indira',
                                 'BGR New Bel',
