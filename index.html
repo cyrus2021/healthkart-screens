@@ -17,6 +17,172 @@
     <script type="text/javascript" src="./Inventory Planner List _ BrightLifecare.com_files/lodash.min.js"></script>
     <script type="text/javascript" src="./Inventory Planner List _ BrightLifecare.com_files/jquery.hkCommonPlugins.js"></script>
     <script type="text/javascript" src="./Inventory Planner List _ BrightLifecare.com_files/common.js"></script>
+
+    
+    <!-- Start edit inventory css here 23/04/2018 - Cyrus -->
+    <style>
+
+        #viewScoutID{
+            margin-top: -5em !important;
+            width: 91em;
+            margin: auto;
+        }
+
+        .table-container{
+            width: 100%;
+            padding: 0;
+        }
+
+        label.show-short-inventory-classes{
+            display: flex;
+            color: #f00;
+        }
+
+        select.inventory-select{
+
+            border: 1px solid #000;
+            background: #ffffff;
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 0px;
+            -o-border-radius: 0px;
+            -ms-border-radius: 0px;
+            -khtml-border-radius: 0px;
+            border-radius: 0px;
+            padding: 2px 5px;
+            /* font-size: 16px; */
+        }
+
+        .view-edit-stores{
+            margin-top: -1.7rem;
+            padding-left: 1rem;
+        }
+
+        .selected-stores-ip-header{
+            padding: 2rem 0;
+            font-size: 2em;
+        }
+
+        .edit-inventory-input-header-title{
+            font-size: 1.3em;
+            padding: 1em 0;
+        }
+
+        .selected-stores-banner{
+            font-size: 1.3em;
+            color: #f00;
+            display: flex;
+        }
+
+        .edit-inventory-input-header{
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        .cfa-container{
+            flex-grow: 2 !important;
+        }
+
+        .edit-inventory-input-item{
+            flex: 0 0 20em;
+        }
+
+        .edit-inventory-input-item .input_field{
+            width: 18em;
+            height: 2em;
+            margin-bottom: 2em;
+        }
+
+        .edit-inventory-input-item select.input_field.acInput{
+            width: 30em;
+        }
+
+        .edit-inventory-input-item.search-button{
+            padding-top: 1.3em;
+            padding-left: 2em;
+            flex-basis: 10em;
+        }
+
+        .edit-inventory-input-item.apply-filter{
+            padding-top: 1.3em;
+            padding-left: 2em;
+            flex-basis: 10em;
+            display: flex;
+        }
+
+        .edit-inventory-input-item.apply-filter input[name=RESET]{
+            background: #555555;
+        }
+
+        .edit-inventory-input-item.clear-dispatch{
+            padding-top: 1.3em;
+            padding-left: 2em;
+            flex-basis: 10em;
+        }
+
+        .edit-inventory-input-item.clear-dispatch input[name=CLEARDISPATCH]{
+            background: #505eff;
+        }
+
+        .small-width{
+            flex-shrink: 1;
+        }
+
+        table#vsTableID th{
+            text-align: center;
+            background: #f5f5f5;
+            color: #000;
+        }
+
+        table#vsTableID td{
+            text-align: center;
+            background: #fbe49229;
+            color: #000;
+        }
+
+        table#vsTableID thead tr{
+            height: 60px;
+        }
+
+        table#vsTableID tbody tr{
+            height: 80px;
+        }
+        
+        table#vsTableID tbody tr:hover{
+            background: #ff9595;;
+        }
+
+        .sku4_table label.highlight{
+            background: none;
+
+        }
+
+        .dispatch-check{
+            cursor: pointer;
+            padding: 0.5rem;
+            color: #0f0;
+            font-size: 1.5em;
+        }
+
+        .dispatch-close{
+            cursor: pointer;
+            padding: 0.5rem;
+            color: #f00;
+            font-size: 1.5em;
+        }
+
+        .dispatch-edit{
+            cursor: pointer;
+            padding: 0.5rem;
+            color: #9494ff;
+            font-size: 1.5em;
+        }
+
+        .wh-name{
+           color: #b500b5 !important;
+           font-weight: bold;
+        }
+
+    </style>
   </head>
   <body id="">
   <div class="container_12">
@@ -134,7 +300,9 @@
       <div class="error-alert messages"></div>
     <style type="text/css" href="./Inventory Planner List _ BrightLifecare.com_files/styles.css"></style>
     <!-- <style type="text/css" href="./Inventory Planner List _ BrightLifecare.com_files/bootstrap.css"></style> -->
+    <!-- 23/04/2018 - Cyrus -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <style type="text/css"> @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800");</style>
     <script type="text/javascript" src="./Inventory Planner List _ BrightLifecare.com_files/moment.min.js"></script>
     <style>
@@ -330,15 +498,27 @@
             </div>
         </div>
     </div>
+    <!-- 23/04/2018 -Cyrus -->
     <div class="full_wrapper " id="viewScoutID">
-        <div class="container newContainer">
-            <div class="sku4_table">
-                <div class="main_heading">
-                    <h2>Search by</h2>
+        <div class="table-container">
+            <div class="selected-stores-ip-header">
+                Inventory Planner for Planner ID <span>#815</span>
+            </div>
+            <div class="selected-stores-banner">
+                <span style="text-decoration: underline;">9 Stores Selected</span>
+                &nbsp;<span style="font-style: italic;">(For Which Inventory planner is created)</span>
+                <span class="view-edit-stores">
+                    <input type="submit" value="View / Edit stores" id="addNewButton" style="display: block;" name="check" onclick="showStoreInventoryModal();">
+                </span>
+            </div>
+            <div class="sku4_table"> 
+                <div class="edit-inventory-input-header-title">
+                    Search by
                 </div>
-                <form onsubmit="searchFunction(this, event)" <div="" class="input_fields">
-                    <div class="row">
-                        <div class="input_area">
+                <form onsubmit="searchFunction(this, event)" class="input_fields">
+                    <!-- 23/04/2018 - Cyrus -->
+                    <div class="edit-inventory-input-header">
+                        <div class="edit-inventory-input-item">
                             <div class="labe_div">
                                 <label>Variant ID</label>
                             </div>
@@ -346,7 +526,7 @@
                                 <input class="input_field" type="text" id="searchVariantID">
                             </div>
                         </div>
-                        <div class="input_area">
+                        <div class="edit-inventory-input-item">
                             <div class="labe_div">
                                 <label>Variant Name</label>
                             </div>
@@ -354,7 +534,7 @@
                                 <input class="input_field acInput" id="productvariantname" type="text">
                             </div>
                         </div>
-                        <div class="input_area">
+                        <div class="edit-inventory-input-item cfa-container">
                             <div class="labe_div">
                                 <label>CFA</label>
                             </div>
@@ -362,11 +542,54 @@
                                 <select class="input_field acInput" id="cfaList"><option id="opt">--All--</option><option id="opt301">DEL Punjabi Bagh (Owner: AQUA)</option><option id="opt310">DEL Rajouri Garden (Owner: AQUA)</option><option id="opt510">FDB Sec 16 (Owner: AQUA)</option><option id="opt710">UP Noida Sec 18 (Owner: AQUA)</option><option id="opt4022">GGN Good Earth (Owner: AQUA)</option><option id="opt4024">BLR Indira Nagar (Owner: AQUA)</option><option id="opt4028">DEL Model Town (Owner: AQUA)</option><option id="opt4030">DEL Shalimar Bagh (Owner: AQUA)</option><option id="opt4037">MUM Bandra (Owner: BLC)</option><option id="opt4038">MUM Mahavir Nagar (Owner: BLC)</option><option id="opt4040">HYD Himayat Nagar (Owner: BLC)</option><option id="opt4041">GZB RDC Raj Nagar (Owner: BLC)</option><option id="opt4043">BLR JP Nagar (Owner: BLC)</option><option id="opt4044">DEL GK2 (Bright) (Owner: BLC)</option><option id="opt4045">DEL Karkardooma (Bright) (Owner: BLC)</option><option id="opt4046">PUN Ludhiana (Owner: BLC)</option><option id="opt4047">PNE Kalyani Nagar (Owner: BLC)</option><option id="opt4049">DEL Green Park (Owner: BLC)</option><option id="opt4051">JAI Malviya Nagar (Owner: BLC)</option><option id="opt4053">DEL Dwarka Sec-10 (Bright) (Owner: BLC)</option><option id="opt4055">GGN PVK (Bright) (Owner: BLC)</option><option id="opt4057">MUM Mulund (Owner: BLC)</option><option id="opt4059">MUM Seawoods (Owner: BLC)</option><option id="opt4061">CHD Sec-35C (Bright) (Owner: BLC)</option><option id="opt4069">MUM THANE (Owner: BLC)</option><option id="opt4071">DEL Lajpat Nagar (Owner: BLC)</option><option id="opt4073">IND Bhawarkuan (Owner: BLC)</option><option id="opt4077">BLR Koramangala (Owner: BLC)</option><option id="opt4079">BLR RT Nagar (Owner: BLC)</option><option id="opt4081">MUM Thakur Village (Owner: BLC)</option><option id="opt4083">DEL DLF Mall Saket (Owner: BLC)</option><option id="opt4085">HYD Banjara Hills (Bright) (Owner: BLC)</option><option id="opt4087">BLR HRBR (Bright) (Owner: BLC)</option><option id="opt4089">BLR Frazer Town (Bright) (Owner: BLC)</option><option id="opt4091">BLR New Bel Road (Bright) (Owner: BLC)</option><option id="opt4093">BLR Basaveshwar Nagar (Bright) (Owner: BLC)</option><option id="opt4095">HYD Gachibowli (Bright) (Owner: BLC)</option><option id="opt4097">PUN Patiala (Bright) (Owner: BLC)</option><option id="opt4099">PUN Amritsar (Bright) (Owner: BLC)</option><option id="opt4101">PUN Mohali (Bright) (Owner: BLC)</option><option id="opt4103">UK Dehradun (Bright) (Owner: BLC)</option><option id="opt4105">HYD Vikram Puri (Owner: BLC)</option><option id="opt4107">DEL Naraina (Owner: BLC)</option><option id="opt4109">GZB IHC Indirapuram (Bright) (Owner: BLC)</option><option id="opt4113">DEL Dwarka Sec-7 (Bright) (Owner: BLC)</option><option id="opt4115">IND Vijay Nagar (Bright) (Owner: BLC)</option><option id="opt4117">DEL Rohini Sec-9 (Bright) (Owner: BLC)</option><option id="opt4121">DEL Defence Colony (Bright) (Owner: BLC)</option><option id="opt4123">JAI Vaishali Nagar (Bright) (Owner: BLC)</option><option id="opt4125">DEL East Patel Nagar (Bright) (Owner: BLC)</option><option id="opt4127">GGN Galleria (Bright) (Owner: BLC)</option><option id="opt612">HK Aqua WH 3.0</option></select>
                             </div>
                         </div>
-                        <div class="search_btn">
+                        <div class="edit-inventory-input-item search-button">
                             <input type="submit" class="btn_field" style="margin-top: 0px;" name="SEARCH" value="SEARCH" onclick="searchFunction(this, event)">
-                            <input type="submit" class="btn_field" style="margin-top: 0px;" name="SEARCH" value="CLEAR DISPATCH" onclick="clearFunction(this, event)">
+                            <!-- <input type="submit" class="btn_field" style="margin-top: 0px;" name="SEARCH" value="CLEAR DISPATCH" onclick="clearFunction(this, event)"> -->
                         </div>
                     </div>
+
+                    <div class="edit-inventory-input-header">
+                            <div class="edit-inventory-input-item">
+                                <div class="labe_div">
+                                    <label>Select Auto Fill Logic</label>
+                                </div>
+                                <div class="input_div">
+                                    <select class="inventory-select">
+                                        <!-- <option id="opt">--All--</option> -->
+                                        <option id="opt301" selected>Maximun of last 3 months sale</option>
+                                        <option id="opt310">Avg of last 3 months sale</option>
+                                        <option id="opt510">Sail count same as last month</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="edit-inventory-input-item">
+                                <div class="labe_div">
+                                    <label>Include / Exclude Current Month</label>
+                                </div>
+                                <div class="input_div">
+                                    <select class="inventory-select">
+                                        <!-- <option id="opt">--All--</option> -->
+                                        <option id="opt301" selected>Exclude current month</option>
+                                        <option id="opt310">Include current month</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="edit-inventory-input-item small-width">
+                                <label class="show-short-inventory-classes">
+                                    <input type="checkbox" value="" checked>
+                                    &nbsp;<span>Show Short Inventory Cases</span>
+                                </label>
+                            </div>
+
+                            <div class="edit-inventory-input-item apply-filter">
+                                    <input type="submit" class="btn_field" style="margin-top: 0px;" name="RESET" value="RESET" >
+                                    <input type="submit" class="btn_field" style="margin-top: 0px;" name="APPLYFILTER" value="APPLY FILTER" >
+                                </div>
+
+                            <div class="edit-inventory-input-item clear-dispatch">
+                                <input type="submit" class="btn_field" style="margin-top: 0px;" name="CLEARDISPATCH" value="CLEAR DISPATCH" onclick="clearFunction(this, event)">
+                            </div>
+                        </div>
                 </form></div>
             
                 <div class="activeName">
@@ -380,6 +603,7 @@
                                 <th class=" Varient_id">Variant</th>
                                 <th class=" varient_name">Name</th>
                                 <th>Stock Point</th>
+                                <th class="wh-name">WH Name</th>
                                 <th id="month3Heading">Jan Sales</th>
                                 <th id="month2Heading">Feb Sales</th>
                                 <th id="month1Heading">Mar Sales</th>
@@ -787,10 +1011,11 @@
     </style>
 
     <!-- markup for inventory stores -->
+    <!-- 23/04/2018 -Cyrus -->
     <div id="inventory-planner" class="planner-modal">
         <div class="planner-modal-content">
             <div class="planner-modal-header">
-                <h4 style="text-decoration: underline;">Create New Inventory Planner for Non/ Private Label Products</h4>
+                <h4 style="text-decoration: underline;">Edit Stores For Inventory Planner <span>#666</span></h4>
                 <span onClick="hideStoreInventoryModal()" class="close-inventory-planner" class="close">&times;</span>
             </div>
             <div class="planner-modal-body">
@@ -957,7 +1182,7 @@
                 <div class="selection-count-container"><span id="selected-inventory-stores">--</span> out of total <span id="total-inventory-stores">--</span> stores selected for Inventory planner</div>
                 <div class="proceed-container">
                     <!-- <button onClick="getAllCheckedStores()" type="button" class="btn btn-primary">Proceed to Create Inventory Planner</button> -->
-                    <input type="submit" value="Proceed to Create Inventory Planner" onClick="getAllCheckedStores()"/>
+                    <input type="submit" value="Update Store List" onClick="getAllCheckedStores()"/>
                 </div>
             </div>
         </div>
@@ -2942,17 +3167,18 @@ var a = document.getElementById("searchVariantID1").value;
             setTimeout(function() {
                 document.getElementById("imageID").style.display = "none";
             },300000);
-            var urlValue = window.location.href;
-            var urlSplit = urlValue.split("plannerType=")[1].split("&")[0];
-            var pageNameSplit = urlValue.split("#pageName=");
-            if(pageNameSplit[1]) {
-                window.location.href = pageNameSplit[0] + "#pageName=stock";
-            }
-            else {
-                window.location.href = pageNameSplit[0] + "#pageName=stock";
-            }
-            $.ajax({
-                url : '/admin/inventoryPlanner/InventoryPlanning.action?viewOrEditInventoryPlanner&inventoryPlannerId='+ requiredID + '&pvId='+a +'&pvName=' + b + '&wh='+c + '&plannerType=' + urlSplit,
+            // var urlValue = window.location.href;
+            // var urlSplit = urlValue.split("plannerType=")[1].split("&")[0];
+            // var pageNameSplit = urlValue.split("#pageName=");
+            // if(pageNameSplit[1]) {
+            //     window.location.href = pageNameSplit[0] + "#pageName=stock";
+            // }
+            // else {
+            //     window.location.href = pageNameSplit[0] + "#pageName=stock";
+            // }
+            $.ajax({ 
+                // url : '/admin/inventoryPlanner/InventoryPlanning.action?viewOrEditInventoryPlanner&inventoryPlannerId='+ requiredID + '&pvId='+a +'&pvName=' + b + '&wh='+c + '&plannerType=' + urlSplit,
+                url : '/viewOrEditInventoryPlanner.json',
                 type : 'GET',
                 success : function(response) {
                     /* Populate data second screen logic goes in here */
@@ -3008,8 +3234,12 @@ var a = document.getElementById("searchVariantID1").value;
                         }
                         screen2Content = screen2Content + '<tr id="vs'+ renderData[j].productVariantWarehouseMapping.productVariant.id +'">';
                         screen2Content = screen2Content + '<td >' + renderData[j].productVariantWarehouseMapping.productVariant.id + '</td>';
-                        screen2Content = screen2Content + '<td >' + renderData[j].productVariantWarehouseMapping.productVariant.variantName + '</td>';
-                        screen2Content = screen2Content + '<td >' + renderData[j].productVariantWarehouseMapping.warehouse.identifier + '<a id="vac'+ renderData[j].productVariantWarehouseMapping.productVariant.id +'" class="all_cities" href="javascript:void(0);" onClick="viewAllCitiesFunction(this)"> All Cities </a></td>';
+                        screen2Content = screen2Content + '<td >' + renderData[j].productVariantWarehouseMapping.productVariant.variantName + '<br/><input type="submit" class="btn_field" style="margin-top: 0px;" name="CLEARCURRENTDISPATCH" value="CLEAR DISPATCH" ></td>';
+                        screen2Content = screen2Content + '<td width="100px">' + renderData[j].productVariantWarehouseMapping.warehouse.identifier + '<br/><a id="vac'+ renderData[j].productVariantWarehouseMapping.productVariant.id +'" class="all_cities" href="javascript:void(0);" onClick="viewAllCitiesFunction(this)"> All Cities </a></td>';
+                        
+                        // 23/04/2018
+                        screen2Content = screen2Content + '<td class="wh-name">GGN WH 4.0</td>';
+                        
                         screen2Content = screen2Content + '<td >' + prevMonthStockValue2 + '</td>';
                         screen2Content = screen2Content + '<td >' + prevMonthStockValue1 + '</td>';
                         screen2Content = screen2Content + '<td >' + prevMonthStockValue + '</td>';
@@ -3037,8 +3267,47 @@ var a = document.getElementById("searchVariantID1").value;
                         else {
                             screen2Content = screen2Content + '<td class="drClass"></td>';
                         }
-                        if(renderData[j].actualDispatchQty) {
-                            screen2Content = screen2Content + '<td >' + renderData[j].actualDispatchQty + '</td>';
+
+                        // 23/04/2018 - Cyrus
+                        window.editDispatch = function(self){
+                            // hide edit icon & qty disp
+                            $(self).css('display','none');
+                            var dispqty = $(self).siblings('.act-disp-qty').css('display','none').text();
+                            console.log("dispqty", dispqty);
+                            // show text field with update & discard icons
+                            $(self).siblings('input["type=number"]').css('display','inline').attr("value",Number(dispqty) );
+                            $(self).siblings('.fas').css('display','inline');
+                        }
+
+                        window.updateDispatch = function(self){
+                            $(self).css('display','none');
+                            $(self).siblings('.fa-times').css('display','none');
+                            var updispqty = $(self).siblings('input["type=number"]').css('display','none').attr('value');
+                            
+                            $(self).siblings('.act-disp-qty').text(updispqty).css('display','inline');
+                            $(self).siblings('.fa-pencil-alt').css('display','inline');
+
+                            // add update logic here
+                        }
+
+                        window.disgardDispatch = function(self){
+                            $(self).css('display','none');
+                            $(self).siblings('.fa-check').css('display','none');
+                            $(self).siblings('input["type=number"]').css('display','none');
+
+                            $(self).siblings('.act-disp-qty').css('display','inline');
+                            $(self).siblings('.fa-pencil-alt').css('display','inline');
+                        }
+
+                        if(renderData[j].actualDispatchQty) { 
+                            screen2Content = screen2Content + '<td width="100px">'
+                                 + '<span>'
+                                 + '<span class="act-disp-qty">' +  renderData[j].actualDispatchQty + '&nbsp;</span>'
+                                 + '<input style="display:none; width: 4rem;" type="number">'
+                                 + '<i class="fas fa-pencil-alt dispatch-edit" onClick="editDispatch(this)"></i>'
+                                 + '<i class="fas fa-check dispatch-check" style="display:none;" onClick="updateDispatch(this)"></i>'
+                                 + '<i class="fas fa-times dispatch-close" style="display:none;" onClick="disgardDispatch(this)"></i>'       
+                                    +'</span></td>';
                         }
                         else {
                             screen2Content = screen2Content + '<td ></td>';
