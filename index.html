@@ -3178,7 +3178,7 @@ var a = document.getElementById("searchVariantID1").value;
             // }
             $.ajax({ 
                 // url : '/admin/inventoryPlanner/InventoryPlanning.action?viewOrEditInventoryPlanner&inventoryPlannerId='+ requiredID + '&pvId='+a +'&pvName=' + b + '&wh='+c + '&plannerType=' + urlSplit,
-                url : '/viewOrEditInventoryPlanner.json',
+                url : './viewOrEditInventoryPlanner.json',
                 type : 'GET',
                 success : function(response) {
                     /* Populate data second screen logic goes in here */
