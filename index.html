@@ -35,7 +35,6 @@
 
         label.show-short-inventory-classes{
             display: flex;
-            color: #f00;
         }
 
         select.inventory-select{
@@ -53,7 +52,7 @@
         }
 
         .view-edit-stores{
-            margin-top: -1.7rem;
+            margin-top: -2.5rem;
             padding-left: 1rem;
         }
 
@@ -70,6 +69,7 @@
         .selected-stores-banner{
             font-size: 1.3em;
             color: #f00;
+            font-weight: bold;
             display: flex;
         }
 
@@ -111,7 +111,7 @@
         }
 
         .edit-inventory-input-item.apply-filter input[name=RESET]{
-            background: #555555;
+            /* background: #555555; */
         }
 
         .edit-inventory-input-item.clear-dispatch{
@@ -552,7 +552,7 @@
                     <div class="edit-inventory-input-header">
                             <div class="edit-inventory-input-item">
                                 <div class="labe_div">
-                                    <label>Select Auto Fill Logic</label>
+                                    <label>Select Auto-Fill Logic</label>
                                 </div>
                                 <div class="input_div">
                                     <!-- <select class="inventory-select"> -->
@@ -560,7 +560,7 @@
                                         <!-- <option id="opt">--All--</option> -->
                                         <option id="opt301" selected>Maximun of last 3 months sale</option>
                                         <option id="opt310">Avg of last 3 months sale</option>
-                                        <option id="opt510">Sail count same as last month</option>
+                                        <option id="opt510">Sale count same as last month</option>
                                     </select>
                                 </div>
                             </div>
@@ -579,13 +579,13 @@
                             </div>
                             <div class="edit-inventory-input-item small-width">
                                 <label class="show-short-inventory-classes">
-                                    <input type="checkbox" value="" checked>
-                                    &nbsp;<span>Show Short Inventory Cases</span>
+                                    <input class="size-med" type="checkbox" value="" checked>
+                                    &nbsp;<span>Show Short Inventory Cases (Red Color)</span>
                                 </label>
                             </div>
 
                             <div class="edit-inventory-input-item apply-filter">
-                                    <input type="submit" class="btn_field" style="margin-top: 0px;" name="RESET" value="RESET" >
+                                    <input type="submit" class="btn_field" style="margin-top: 0px;" name="RESET" value="REFRESH" >
                                     <input type="submit" class="btn_field" style="margin-top: 0px;" name="APPLYFILTER" value="APPLY FILTER" >
                                 </div>
 
@@ -861,6 +861,24 @@
                 -webkit-transform: scale(1.5); /* Safari and Chrome */
                 -o-transform: scale(1.5); /* Opera */
                 /* padding: 10px; */
+            }
+
+            .size-med{
+                -ms-transform: scale(1.5); /* IE */
+                -moz-transform: scale(1.5); /* FF */
+                -webkit-transform: scale(1.5); /* Safari and Chrome */
+                -o-transform: scale(1.5); /* Opera */
+            }
+
+            .small-action{
+                -ms-transform: scale(0.8); /* IE */
+                -moz-transform: scale(0.8); /* FF */
+                -webkit-transform: scale(0.8); /* Safari and Chrome */
+                -o-transform: scale(0.8); /* Opera */
+                background: #fff !important;
+                color: #01bfa5 !important;
+                text-shadow: none !important;
+                border: 1px solid #888888 !important;
             }
 
             .planner-modal-header{
@@ -3237,7 +3255,7 @@ var a = document.getElementById("searchVariantID1").value;
                         }
                         screen2Content = screen2Content + '<tr id="vs'+ renderData[j].productVariantWarehouseMapping.productVariant.id +'">';
                         screen2Content = screen2Content + '<td >' + renderData[j].productVariantWarehouseMapping.productVariant.id + '</td>';
-                        screen2Content = screen2Content + '<td >' + renderData[j].productVariantWarehouseMapping.productVariant.variantName + '<br/><input type="submit" class="btn_field" style="margin-top: 0px;" name="CLEARCURRENTDISPATCH" value="CLEAR DISPATCH" ></td>';
+                        screen2Content = screen2Content + '<td width="150px">' + renderData[j].productVariantWarehouseMapping.productVariant.variantName + '<br/><input type="submit" class="btn_field small-action" style="margin-top: 0px;" name="CLEARCURRENTDISPATCH" value="CLEAR DISPATCH" ></td>';
                         screen2Content = screen2Content + '<td width="100px">' + renderData[j].productVariantWarehouseMapping.warehouse.identifier + '<br/><a id="vac'+ renderData[j].productVariantWarehouseMapping.productVariant.id +'" class="all_cities" href="javascript:void(0);" onClick="viewAllCitiesFunction(this)"> All Cities </a></td>';
                         
                         // 23/04/2018
